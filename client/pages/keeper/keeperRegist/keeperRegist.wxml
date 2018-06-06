@@ -39,15 +39,15 @@
     <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell weui-cell_input">
             <view class="weui-cell__hd">
-                <view hidden class="weui-label">验证码</view>
+                <view class="weui-label">验证码</view>
             </view>
             <view class="weui-cell__bd">
-                <input hidden class="weui-input" placeholder="输入验证码" name="openId" type="number" bindinput="captchaInput"/>
+                <input class="weui-input" placeholder="输入验证码" name="openId" type="number" bindinput="captchaInput"/>
             </view>
         </view>
     </view>
     <view class="button-sp-area" style='margin-top: 60rpx;'>
-            <button hidden class="weui-btn" type="primary" plain="true"  bindtap="getCaptcha">获取验证码</button>
+            <button class="weui-btn" type="primary" plain="true"  bindtap="getCaptcha">获取验证码</button>
     </view>
     <button class="weui-btn" type="primary" formType='submit'>注册</button>
     </form>

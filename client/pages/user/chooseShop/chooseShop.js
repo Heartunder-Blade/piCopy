@@ -45,7 +45,7 @@ Page({
             for(var i=0,len=result.data.shops.length;i<len;i++){
             var marker={ 
               'id':result.data.shops[i].id,
-              'label':{
+              'callout':{
                 //'title': result.data.shop[i].name,
                 'content':result.data.shops[i].name,
                 'bgcolor':"yellow",
@@ -58,7 +58,7 @@ Page({
               }
                 markers[i+1]=marker
             }
-            //console.log(markers)
+            console.log(markers)
             that.setData({
               'location':markers[0],
               'markers':markers

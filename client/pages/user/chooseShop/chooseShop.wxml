@@ -4,6 +4,6 @@
         <view class="page__title">请选择商家</view>
         <view class="page__desc">通过点击地图上的标记即可进入对应商家的店铺</view>
   </view>
-    <map longitude="{{location.longitude}}" latitude="{{location.latitude}}" include-points markers="{{markers}}"
+    <map longitude="{{markers[0].longitude}}" latitude="{{markers[0].latitude}}" include-points markers="{{markers}}"
     bindmarkertap="getShop" include-points="{{markers}}" style='width:100%; height:75vh;'></map>
 </view><!--pages/user/chooseShop/chooseShop.wxml-->
