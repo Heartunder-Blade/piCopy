@@ -1,1 +1,43 @@
 /* pages/user/history/history.wxss */
+
+.orders {
+  display: flex;
+  flex-direction: column;
+}
+
+.order {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
+}
+
+.order image {
+  width: 156rpx;
+  height: 156rpx;
+}
+
+.orderlist {
+  display: flex;
+  flex-direction: column;
+}
+
+.over{
+  color: green; 
+}
+
+.up{
+  color:orange;
+}
+
+.error{
+  color:red;
+}
+.weui-panel{
+  background-color: #F8F8F8;
+  position: inherit;
+}
+.weui-panel_order{
+  background: white;
+  margin-top: 50rpx;
+  margin-bottom: 30rpx;
+}

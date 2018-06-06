@@ -1,18 +1,59 @@
 <!--pages/user/history/history.wxml-->
-<scroll-view scroll-y="true">
-    <view wx:for="{{orders}}" wx:for-item="order">
-        <view>
-            <view wx:if="{{order.origin_name != null}}">
-                <text>{{order.origin_name}}</text>
-                <text>{{order.price}}</text>
-            </view>
-            <view wx:else>
-                <text>空</text>
-            </view>
-            <button data-orderid="{{order.id}}">订单详情</button>
-            <view wx:if="{{order.finish_time != null}}">已完成</view>
-            <view wx:elif="{{order.create_time != null}}">已提交</view>
-            <view wx:else>未上传文件</view>
+<!-- <scroll-view scroll-y="true">
+  <view class="orders">
+    <view wx:for="{{orders}}" wx:key="key" wx:for-item="order">
+      <view class="order">
+        <image src='/img/file.png' />
+        <view class='orderlist'>
+          <view wx:if="{{order.origin_name != null}}" class='orderlist'>
+            <text>文档名:{{order.origin_name}}</text>
+            <text>总价:{{order.price}}元</text>
+          </view>
+          <view wx:else class='orderlist'>
+            <text>文档名:空</text>
+            <text>总价:空</text>
+          </view>
+          <view wx:if="{{order.finish_time != null}}">已完成</view>
+          <view wx:elif="{{order.create_time != null}}">已提交</view>
+          <view wx:else>未上传</view>
         </view>
+        <button data-orderid="{{order.id}}">订单详情</button>
+      </view>
     </view>
-</scroll-view>
+  </view>
+</scroll-view> -->
+
+<view class="weui-panel weui-panel_access">
+  <view class='weui-panel_order' wx:for="{{orders}}" wx:key="key" wx:for-item="order">
+    <view class="weui-panel__bd">
+      <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          <image class="weui-media-box__thumb" src="/img/file.png" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view wx:if="{{order.origin_name != null}}" class="weui-media-box__title">
+            <text>文档名:{{order.origin_name}}</text>
+          </view>
+          <view wx:else class='weui-media-box__title'>
+            <text>文档名:空</text>
+          </view>
+          <view wx:if="{{order.origin_name != null}}" class="weui-media-box__desc">
+            <text>总价:{{order.price}}元</text>
+          </view>
+        </view>
+        <view>
+          <view wx:if="{{order.finish_time != null}}" class="over">
+            <text>已完成</text>
+          </view>
+          <view wx:elif="{{order.create_time != null}}" class="up">
+            <text>已提交</text>
+          </view>
+          <view wx:else class="error">
+            <text>未上传</text>
+          </view>
+        </view>
+
+      </navigator>
+    </view>
+  </view>
+</view>
