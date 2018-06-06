@@ -1,8 +1,10 @@
 <!--pages/user/chooseShop/shopInfo/fileConfirm/fileConfirm.wxml-->
+<image class='topimg' src='../../../image/top.jpg' mode='aspectFit' />
 <view wx:if="{{filePath}}">
-    <text>{{originName}}</text>
-    <text>{{price}}</text>
-    <button bindtap="confirm">提交订单</button>
+    <view><text>文件名:{{originName}}</text></view>
+    <view><text>总价格:{{price}}元</text></view>
+    <button class='button' type='primary' bindtap="confirm">提交订单</button>
 </view>
-<button bindtap="getFile">已上传文件预览</button>
-
+<view>
+<button class='button' bindtap="getFile">已上传文件预览</button>
+</view>
