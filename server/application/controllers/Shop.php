@@ -138,6 +138,7 @@ class Shop extends CI_Controller {
             DB::update("shops",["name"=>$infoArry["shopName"],"page_price"=>$infoArry["price"]],["id"=>$infoArry['id']]);
             $this->json([
                 "code"=>0,
+                'form'=>$infoArry
             ]);
         }catch (Expection $e){
             $this->json([

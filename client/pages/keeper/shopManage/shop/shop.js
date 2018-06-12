@@ -115,14 +115,12 @@ Page({
             success: function (res) {
               console.log(res)
               if (res.data.code == 0) {
-                console.log("in!!!!!!!!!!!!!!")
                 //提示修改成功
                 that.setData({
                   'shop.page_price':form.price,
                   'shop.name':form.shopName,
-                  "isEdit": false
+                  'isEdit': false
                 })
-                console.log(this.data.isEdit)
               }
               else {
                 //提示更新失败

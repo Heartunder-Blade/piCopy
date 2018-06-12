@@ -19,7 +19,12 @@ Page( {
         // 调用登录接口
         var loginUrl=config.service.loginUrl+this.data.identity
         var redirectUrl = "/pages/" + this.data.identity + "/" + this.data.identity
-        qcloud.request({
+
+        if(this.data.identity=="keeper")
+            redirectUrl="/pages/" + this.data.identity+"/shopManage/shopManage"
+        //当写完商家信息页面之后去掉该跳转
+        
+            qcloud.request({
             url: loginUrl,
             login: true,
             success(result) {
